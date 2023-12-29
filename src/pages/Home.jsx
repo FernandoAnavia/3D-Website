@@ -10,7 +10,7 @@ import HomeInfo from '../Components/HomeInfo'
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
-  const [currentStage, setCurrentStage] = useState(0);
+  const [currentStage, setCurrentStage] = useState(1);
 
   const adjustTempleForScreenSize = () => {
     let screenScale = null;
@@ -46,7 +46,7 @@ const Home = () => {
 
   return (
     <section className="w-full h-screen relative">
-      <div className="absolute top-28 left-0 right-0 z-10 flex justify-center justify-center text-white">
+      <div className="absolute top-28 left-28 right-20 z-10 flex justify-left text-white">
         {currentStage && <HomeInfo currentStage = {currentStage}/>}
       </div>
       <Canvas
