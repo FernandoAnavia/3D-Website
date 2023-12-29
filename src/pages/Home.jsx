@@ -5,15 +5,16 @@ import Loader from '../Components/Loader'
 import Temple from '../models/temple'
 import Sky from '../models/Sky'
 import Ajolote from '../models/Ajolote'
+import HomeInfo from '../Components/HomeInfo'
 
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
-  const [currentStage, setCurrentStage] = useState(1);
+  const [currentStage, setCurrentStage] = useState(0);
 
   const adjustTempleForScreenSize = () => {
     let screenScale = null;
-    let screenPosition = [0, -5.5, -45];
+    let screenPosition = [0, -6.5, -45];
     let rotation = [0.1, -0.75, 0]
 
     if (window.innerWidth < 768) {
@@ -46,7 +47,7 @@ const Home = () => {
   return (
     <section className="w-full h-screen relative">
       <div className="absolute top-28 left-0 right-0 z-10 flex justify-center justify-center text-white">
-        POPUP
+        {currentStage && <HomeInfo currentStage = {currentStage}/>}
       </div>
       <Canvas
         className={`w-full h-screen bg-transparent ${

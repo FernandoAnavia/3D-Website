@@ -102,41 +102,43 @@ export function Temple ({
   return (
     <a.group ref={templeRef} {...props}>
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.Land.geometry}
         material={materials["Material.006"]}
       />
       <mesh
-        
-        
-        geometry={nodes.Water.geometry}
-        material={materials.Water}
-      />
-      <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.Stones.geometry}
         material={materials.Stones}
         position={[-14.278, 0.409, -21.474]}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.Plane.geometry}
         material={materials["Material.007"]}
         position={[0, 0, 18.465]}
         scale={[2.075, 3.499, 3.499]}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane001.geometry}
+        material={materials.Material}
+        position={[15.301, -0.704, -27.502]}
+        scale={[6.061, 2.212, 2.212]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.Ceiling.geometry}
         material={materials["Material.003"]}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.Logo.geometry}
         material={materials["Material.004"]}
         position={[7.274, 6.882, 0.083]}
@@ -144,8 +146,8 @@ export function Temple ({
         scale={0.5}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.Ornament_l3.geometry}
         material={materials["Material.004"]}
         position={[-6.423, 8.995, 1.265]}
@@ -153,8 +155,8 @@ export function Temple ({
         scale={0.527}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.Ornaments_l0.geometry}
         material={materials["Material.004"]}
         position={[-10.2, -4.728, 6.016]}
@@ -162,16 +164,16 @@ export function Temple ({
         scale={0.056}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.Ornaments_l1.geometry}
         material={materials["Material.004"]}
         position={[-5.892, -2.051, 8.7]}
         scale={0.056}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.Ornaments_l2.geometry}
         material={materials["Material.004"]}
         position={[0.237, -0.317, -6.633]}
@@ -179,149 +181,79 @@ export function Temple ({
         scale={0.056}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.Pyramid.geometry}
         material={materials["Material.003"]}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.Stairs.geometry}
         material={materials["Material.003"]}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.tree.geometry}
         material={materials["Material.007"]}
         position={[-18.291, 0, 5.789]}
         scale={1.214}
       >
         <mesh
-          
-          
+          castShadow
+          receiveShadow
           geometry={nodes.leaves.geometry}
           material={materials["Material.006"]}
         />
       </mesh>
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.tree001.geometry}
         material={materials["Material.007"]}
         position={[23.119, 0.405, 18.808]}
         scale={0.523}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.tree002.geometry}
         material={materials["Material.007"]}
         position={[-9.68, 0, -16.863]}
         scale={1.214}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.tree003.geometry}
         material={materials["Material.007"]}
         position={[-8.089, 0, 22.133]}
         scale={0.576}
       />
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.tree004.geometry}
         material={materials["Material.007"]}
         position={[-9.68, 0, -16.863]}
         scale={1.214}
       >
         <mesh
-          
-          
+          castShadow
+          receiveShadow
           geometry={nodes.leaves003.geometry}
           material={materials["Material.006"]}
         />
       </mesh>
       <mesh
-        
-        
+        castShadow
+        receiveShadow
         geometry={nodes.tree005.geometry}
         material={materials["Material.007"]}
         position={[23.121, 0, -17.454]}
         scale={1.214}
       />
-      <group position={[0.018, 0, 0]} scale={0.479}>
-        <mesh
-          
-          
-          geometry={nodes.Cylinder.geometry}
-          material={materials["Material.007"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cylinder_1.geometry}
-          material={materials["1200px-Fire_from_brazier"]}
-        />
-      </group>
-      <group position={[-0.364, 2.599, -1.223]} scale={0.479}>
-        <mesh
-          
-          
-          geometry={nodes.Cylinder001.geometry}
-          material={materials["Material.007"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cylinder001_1.geometry}
-          material={materials["1200px-Fire_from_brazier"]}
-        />
-      </group>
-      <group position={[0.378, 4.821, -2.937]} scale={0.479}>
-        <mesh
-          
-          
-          geometry={nodes.Cylinder002.geometry}
-          material={materials["Material.007"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cylinder002_1.geometry}
-          material={materials["1200px-Fire_from_brazier"]}
-        />
-      </group>
-      <group position={[1.993, 7.262, -4.364]} scale={0.479}>
-        <mesh
-          
-          
-          geometry={nodes.Cylinder003.geometry}
-          material={materials["Material.007"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cylinder003_1.geometry}
-          material={materials["1200px-Fire_from_brazier"]}
-        />
-      </group>
-      <group position={[3.521, -0.207, 11.952]} scale={0.479}>
-        <mesh
-          
-          
-          geometry={nodes.Cylinder004.geometry}
-          material={materials["Material.007"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cylinder004_1.geometry}
-          material={materials["1200px-Fire_from_brazier"]}
-        />
-      </group>
     </a.group>
   );
 }

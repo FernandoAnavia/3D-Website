@@ -17,7 +17,7 @@ const Ajolote = ({ isRotating, ...props }) => {
   })
 
   return (
-    <mesh ref={ref} position ={[-13.5,-1.5,-10]} scale = {[.6, .6, .6]} rotation = {[0.1,.8,0]}>
+    <mesh ref={ref} position ={[-13.5,-1.0,-10.5]} scale = {[.6, .6, .6]} rotation = {[0.1,0.3, 0]}>
         <primitive object={scene} />
     </mesh>
   )

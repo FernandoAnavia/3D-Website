@@ -18,7 +18,7 @@ export default {
           500: "#2b77e7"
         },
         gold: {
-          100: "#FFD700"
+          100: "#FF5733"
         },
 
       },
@@ -28,9 +28,8 @@ export default {
       },
       boxShadow: {
         card: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)'
-      }
-
-      
+      },
+     
     },
   },
   plugins: [],
