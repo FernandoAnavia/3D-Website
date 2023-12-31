@@ -3,6 +3,9 @@ import emailjs from '@emailjs/browser'
 import Ajolote from '../models/AjoloteContact';
 import { Canvas } from '@react-three/fiber';
 import Loader from '../Components/Loader';
+import useAlert from '../hooks/useAlert';
+import Alert from '../Components/Alert';
+
 
 const Contact = () => {
 
@@ -10,6 +13,7 @@ const Contact = () => {
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: '', email: '', message: ''})
   const [currentAnimation, setCurrentAnimation] = useState('Standing')
+  const {alert, showAlert, hideAlert} = useAlert();
 
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value})
@@ -32,10 +36,10 @@ const Contact = () => {
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     ).then(() => {
       setIsLoading(false);
-      // TODO: Show success message
-      // TODO: Hide an alert
+      showAlert({show: true, text: 'Message sent successfully!', type: 'success'})
 
       setTimeout(() => {
+        hideAlert(false);
         setCurrentAnimation('Standing')
         setForm({name: '', email: '', message: ''})
       }, [3000])
@@ -46,7 +50,7 @@ const Contact = () => {
       setIsLoading(false);
       setCurrentAnimation('Basic');
       console.log(error);
-      // TODO: Show error message
+      showAlert({show: true, text: 'Something went wrong, please try again', type: 'danger'})
     })
   };
   const handleFocus = () => setCurrentAnimation('Basic');
@@ -54,7 +58,12 @@ const Contact = () => {
 
 
   return (
-    <section className='relative flex lg:flex-row flex-col max-container'>
+    <section className='relative flex lg:flex-row flex-col max-container bg-[#adc9dc]'>
+
+      {alert.show && <Alert {...alert}/>}
+        
+
+
       <div className='flex-1 min-w-[50%] flex flex-col'>
         <h1 className='head-text'> Get in touch </h1>
         <form className='w-full flex flex-col gap-7 mt-14'

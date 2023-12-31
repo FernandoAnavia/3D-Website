@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
-import scene from '../assets/3d/Ajolote.glb'
+import scene from '../assets/3d/AjoloteContact.glb'
 
 const AjoloteContact = ({currentAnimation, ...props}) => {
   const group = useRef();
