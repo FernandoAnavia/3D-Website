@@ -1,10 +1,15 @@
-import React, { useRef, useState } from 'react'
+import React, { Suspense, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import Ajolote from '../models/AjoloteContact';
+import { Canvas } from '@react-three/fiber';
+import Loader from '../Components/Loader';
 
 const Contact = () => {
 
+  const [isLoading, setIsLoading] = useState(false);
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: '', email: '', message: ''})
+  const [currentAnimation, setCurrentAnimation] = useState('Standing')
 
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value})
@@ -12,14 +17,41 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
+    setCurrentAnimation('Basic');
 
-    emailjs.sendForm(
+    emailjs.send(
+      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: form.name,
+        to_name: "Fernando Anavia",
+        from_email: form.email,
+        to_email: 'fer.anavia@gmail.com',
+        message: form.message,
+      },
+      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+    ).then(() => {
+      setIsLoading(false);
+      // TODO: Show success message
+      // TODO: Hide an alert
 
-    )
+      setTimeout(() => {
+        setCurrentAnimation('Standing')
+        setForm({name: '', email: '', message: ''})
+      }, [3000])
+
+
+
+    }).catch((error) => {
+      setIsLoading(false);
+      setCurrentAnimation('Basic');
+      console.log(error);
+      // TODO: Show error message
+    })
   };
-  const handleFocus = () => {};
-  const handleBlur = () => {};
-  const [isLoading, setIsLoading] = useState(false);
+  const handleFocus = () => setCurrentAnimation('Basic');
+  const handleBlur = () => setCurrentAnimation('Standing');
+
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container'>
@@ -80,6 +112,27 @@ const Contact = () => {
           </button>
         </form>
 
+      </div>
+      <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+        <Canvas
+          camera={{
+            position:[0,0,5],
+            fov: 75,
+            near: 0.1,
+            far: 1000
+          }}
+        >
+          <directionalLight intensity={2.5} position={[0,0,1]}/>
+          <ambientLight intensity={.2}/>
+          <Suspense fallback={<Loader />}>
+            <Ajolote 
+              currentAnimation={currentAnimation}
+              position ={[-0.5, 0.35, 0]}
+              rotation = {[0.2, -0.15, 0]}
+              scale = {[0.65, 0.65, 0.65]}
+            />
+          </Suspense>
+        </Canvas>
       </div>
     </section>
   )
