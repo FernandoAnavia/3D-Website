@@ -1,16 +1,30 @@
-import {useState, Suspense} from 'react'
+import { useState, Suspense, useEffect, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../Components/Loader'
-
 import Temple from '../models/temple'
 import Sky from '../models/Sky'
 import Ajolote from '../models/Ajolote'
 import HomeInfo from '../Components/HomeInfo'
+import sakura from '../assets/sakura.mp3'
+import { soundoff, soundon } from '../assets/icons'
 
 
 const Home = () => {
+  const audioRef = useRef(new Audio(sakura));
+  audioRef.current.volume = 0.25;
+  audioRef.current.loop = true;
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+  useEffect (() => {
+    if(isPlayingMusic) {
+      audioRef.current.play();
+    }
+    return () => {
+      audioRef.current.pause();
+    }
+  }, [isPlayingMusic])
 
   const adjustTempleForScreenSize = () => {
     let screenScale = null;
@@ -72,12 +86,20 @@ const Home = () => {
             />
             <Ajolote 
               isRotating = {isRotating}
-              AjolotePosition = {AjolotePosition}
-              AjoloteScale = {AjoloteScale}
+              position = {AjolotePosition}
+              scale = {AjoloteScale}
               rotation = {[0,20,0]}
             />
         </Suspense>
       </Canvas>
+      <div className='absolute bottom-2 left-2'>
+        <img 
+          src={!isPlayingMusic ? soundoff : soundon}
+          alt='sound'
+          className='w-10 h-10 cursor-pointer object-contain'
+          onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+        />
+      </div>
     </section>
   )
 }
