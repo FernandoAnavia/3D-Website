@@ -1,6 +1,6 @@
 import {useEffect, useRef} from 'react'
 
-import ajoloteScene from '../assets/3d/Ajolote.glb'
+import ajoloteScene from '../assets/3d/Quetzalcoatl1'
 import { useAnimations, useGLTF } from '@react-three/drei'
 
 const Ajolote = ({ isRotating, ...props }) => {
