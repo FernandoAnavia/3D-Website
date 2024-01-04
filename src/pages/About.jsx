@@ -12,7 +12,13 @@ const About = () => {
       </h1>
       <div>
         <p className='mt-5 flex flex-col gap-3 text-slate-600'>
-          A recent graduate in Computing and IT, I am from Mexico but I am currently based in Ireland with a visa 1G valid until October 2024
+        A recent graduate in Computing and IT, I am from Mexico but I am currently based in Ireland with a visa valid until October 2024. 
+        <br /><br /> I am looking for a job in the IT sector, even though it is a large field with a great variety of positions I would love to work 
+        in the: <span className='font-semibold' style={{ display: 'inline' }}> Gaming industry, Data science & analytics, Artificial intelligence & Machine learning or Web development.</span>
+
+
+          I know I still have a lot to learn through this innovating carrer, but I can asure you that I always go the extra mile to improve and succeed in 
+          any position.
         </p>
       </div>
       <div className='py-10 flex flex-col'>

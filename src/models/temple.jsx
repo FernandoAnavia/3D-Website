@@ -100,18 +100,17 @@ export function Temple ({
       const normalizedRotation =
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
-      // Set the current stage based on the island's orientation
       switch (true) {
-        case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
+        case normalizedRotation >= 0.5 && normalizedRotation <= 1.1: //5.45 & 5.85
           setCurrentStage(4);
           break;
-        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
+        case normalizedRotation >= 2.5 && normalizedRotation <= 3.1:  //.85 & 1.3
           setCurrentStage(3);
           break;
-        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+        case normalizedRotation >= 4.1 && normalizedRotation <= 4.7:  //2.4 & 2.6
           setCurrentStage(2);
           break;
-        case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
+        case normalizedRotation >= 5.2 && normalizedRotation <= 5.8: //4.25 & 4.75
           setCurrentStage(1);
           break;
         default:
@@ -124,6 +123,12 @@ export function Temple ({
   return (
     <a.group ref={templeRef} {...props}>
       <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Land.geometry}
+        material={materials["Material.006"]}
+      />
+<mesh
         castShadow
         receiveShadow
         geometry={nodes.Land.geometry}
@@ -217,41 +222,10 @@ export function Temple ({
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.tree.geometry}
-        material={materials["Material.007"]}
-        position={[-18.291, 0, 5.789]}
-        scale={1.214}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.leaves.geometry}
-          material={materials["Material.006"]}
-        />
-      </mesh>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.tree001.geometry}
-        material={materials["Material.007"]}
-        position={[23.119, 0.405, 18.808]}
-        scale={0.523}
-      />
-      <mesh
-        castShadow
-        receiveShadow
         geometry={nodes.tree002.geometry}
         material={materials["Material.007"]}
         position={[-9.68, 0, -16.863]}
         scale={1.214}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.tree003.geometry}
-        material={materials["Material.007"]}
-        position={[-8.089, 0, 22.133]}
-        scale={0.576}
       />
       <mesh
         castShadow
@@ -271,10 +245,132 @@ export function Temple ({
       <mesh
         castShadow
         receiveShadow
+        geometry={nodes.tree001.geometry}
+        material={materials["Material.007"]}
+        position={[-32.946, 0, -1.284]}
+        scale={1.214}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.leaves001.geometry}
+          material={materials["Material.006"]}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.tree003.geometry}
+        material={materials["Material.007"]}
+        position={[8.808, 0, -30.989]}
+        scale={1.927}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.leaves002.geometry}
+          material={materials["Material.006"]}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.tree005.geometry}
         material={materials["Material.007"]}
-        position={[23.121, 0, -17.454]}
+        position={[-25.883, 0, -30.574]}
         scale={1.214}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.leaves004.geometry}
+          material={materials["Material.006"]}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.tree006.geometry}
+        material={materials["Material.007"]}
+        position={[35.605, 0, -21.849]}
+        scale={1.214}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.leaves005.geometry}
+          material={materials["Material.006"]}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.tree007.geometry}
+        material={materials["Material.007"]}
+        position={[35.19, 0, -0.453]}
+        scale={1.214}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.leaves006.geometry}
+          material={materials["Material.006"]}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.tree008.geometry}
+        material={materials["Material.007"]}
+        position={[29.166, 0, 19.905]}
+        scale={1.214}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.leaves007.geometry}
+          material={materials["Material.006"]}
+          rotation={[0, 0.185, 0]}
+          scale={0.842}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.tree009.geometry}
+        material={materials["Material.007"]}
+        position={[-20.898, 0, 26.137]}
+        scale={0.993}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.leaves008.geometry}
+          material={materials["Material.006"]}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.tree010.geometry}
+        material={materials["Material.007"]}
+        position={[3.041, 0, 40.772]}
+        scale={0.701}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.leaves009.geometry}
+          material={materials["Material.006"]}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.tree011.geometry}
+        material={materials["Material.007"]}
+        position={[29.002, 0, 33.461]}
+        scale={0.701}
       />
     </a.group>
   );

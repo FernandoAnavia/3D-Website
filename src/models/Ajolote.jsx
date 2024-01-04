@@ -1,6 +1,6 @@
 import {useEffect, useRef} from 'react'
 
-import ajoloteScene from '../assets/3d/Quetzalcoatl1'
+import ajoloteScene from '../assets/3d/QuetzalcoatlFinal1.glb'
 import { useAnimations, useGLTF } from '@react-three/drei'
 
 const Ajolote = ({ isRotating, ...props }) => {
@@ -9,15 +9,17 @@ const Ajolote = ({ isRotating, ...props }) => {
   const { actions } =useAnimations (animations, ref);
 
   useEffect (() => {
+    const actionPlayed = actions['ArmatureAction'];
+
     if(isRotating) {
-        actions['Basic'].play();
+        actionPlayed.setDuration(12.5).play();
     } else {
-        actions['Standing'].play();
+        actionPlayed.setDuration(25).play(); 
     }
   })
 
   return (
-    <mesh ref={ref} position ={[-13.5,-1.0,-10.5]} scale = {[.6, .6, .6]} rotation = {[0.1,0.3, 0]}>
+    <mesh ref={ref} position ={[-2,-1.5,0]} scale = {[.65, .65, .65]} rotation = {[.7, -.15, -0.1]}>
         <primitive object={scene} />
     </mesh>
   )

@@ -1,4 +1,5 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, shopify, starbucks, tesla} from "../assets/images";
+
 import {
     car,
     contact,
@@ -111,16 +112,19 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
+        title: "Hostels Manager",
+        company_name: "Canbe",
         icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        iconBg: "#a3752a",
+        date: "February 2023 - October 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Overseeing daily operations",
+            "Ensuring policies and quality standards are met consistently",
+            "Addressing queries and complaints offering a prompt resolution to eventual issues",
+            "Balancing weekly financial reports",
+            "Assisting with the recruiting and training of new staff",
+            "Inspection and supervision of the cleanliness quality throughout the buildings",
+            "Carrying out regular stock takes, keeping inventory levels and limiting losses"
         ],
     },
     {
