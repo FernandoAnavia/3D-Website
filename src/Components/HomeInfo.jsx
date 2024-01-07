@@ -19,21 +19,21 @@ const renderContent = {
   ),
   2: (
     <InfoBox
-      text="I learnt some skills in Game coding & design 🎮, data manipulation & visualization 📈, AI & Machine Learning 🤖, Web design 🌐, among others"
+      text="I learnt some skills in Game development & design 🎮, data manipulation & visualization 📈, Artificial intelligence & Machine Learning 🤖, Web design 🌐, among others"
       link="/about"
       btnText="Find more info" 
     />
   ),
   3: (
     <InfoBox
-    text="Still learning and polishing my skills 🌌, but you can see some of my projects here"
+    text="Still learning and polishing my skills 🌌, but you can see some of my projects here, which might have some room of improvement"
     link="/projects"
     btnText="Visit my portfolio" 
   />
   ),
   4: (
     <InfoBox
-      text="This website will be improved within the time, please make sure to visit me agaian! 🐲 Meanwhile, please get in touch for more info here"
+      text="This website will be improved within the time, please make sure to visit me again! 🐲 Meanwhile, please get in touch for more info here"
       link="/contact"
       btnText="Contact me" 
     />

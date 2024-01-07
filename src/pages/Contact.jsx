@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import Loader from '../Components/Loader';
 import useAlert from '../hooks/useAlert';
 import Alert from '../Components/Alert';
+import ScrollToTop from '../Components/ScrollToTop';
 
 
 const Contact = () => {
@@ -14,6 +15,8 @@ const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: ''})
   const [currentAnimation, setCurrentAnimation] = useState('Standing')
   const {alert, showAlert, hideAlert} = useAlert();
+
+  
 
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value})
@@ -59,7 +62,7 @@ const Contact = () => {
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container bg-[#adc9dc] h-[150vh]'>
-
+      <ScrollToTop />
 
       {alert.show && <Alert {...alert}/>}
         
