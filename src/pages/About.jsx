@@ -18,12 +18,9 @@ const About = () => {
       <div>
         <p className='mt-5 flex flex-col gap-3 text-slate-600'>
         A recent graduate in Computing and IT, I am from Mexico but I am currently based in Ireland with a visa valid until October 2024. 
-        <br /><br /> I am looking for a job in the IT sector, even though it is a large field with a great variety of positions I would love to work 
-        in the: <span className='font-semibold' style={{ display: 'inline' }}> Gaming industry, Data science & analytics, Artificial intelligence & Machine learning or Web development.</span>
+        <br /><br /> I am actively seeking employment in the IT sector. As a young professional, I am highly motivated and eager to learn and challenge my existing limitations and, 
+        I would love to apply the theoretical knowledge I have gained in a practical setting.
 
-
-          I know I still have a lot to learn through this innovating carrer, but I can asure you that I always go the extra mile to improve and succeed in 
-          any position.
         </p>
       </div>
 
@@ -54,11 +51,21 @@ const About = () => {
       </div>
 
       <div className='py-16'>
+        <h3  className='subhead-text'> Education </h3>
+        <div>
+        <p className='mt-5 flex flex-col gap-3 text-slate-600'>
+        - CCT College (Sep 2021 - Sep 2023) Bachelor of Science (Honours) in Computing and IT. Level 8 NFQ.
+        </p>
+        <p className='mt-5 flex flex-col gap-3 text-slate-600'>
+        - Dorset College (Feb 2018 - Sep 2021) Bachelor of Science in Computing. Level 7 NFQ
+        </p>
+        </div>
+        <br/>
         <h3  className='subhead-text'> Work Experience </h3>
         <div>
         <p className='mt-5 flex flex-col gap-3 text-slate-600'>
-          Even though I have not worked in this field yet, I have got some valauble experience in my previous jobs 
-          which can be useful in management, administration, organization, etc.  
+        While I have not yet worked in the IT field, I have got valuable experience in my previous roles. This experience has equipped me 
+        with skills in management, administration, organization, and more, which I believe can be beneficial in a new professional setting.
         </p>
         </div>
 

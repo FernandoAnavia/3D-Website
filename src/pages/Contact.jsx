@@ -75,7 +75,14 @@ const Contact = () => {
         <br />
         <p style={{ fontSize: '1.125rem' }}> <span style={{display: 'inline-block', width: '150px', fontWeight: '600', color: '#FF5733' }}> phone number: </span> +353 899639295 </p>
         <br />
-        <p style={{ fontSize: '1.125rem' }}> <span style={{display: 'inline-block', width: '150px', fontWeight: '600', color: '#FF5733' }}> LinkedIn </span> https://www.linkedin.com/in/fernandoanavia/ </p>
+        <p style={{ fontSize: '1.125rem' }}> <span style={{display: 'inline-block', width: '150px', fontWeight: '600', color: '#FF5733' }}> LinkedIn </span>
+        <a
+          href='https://www.linkedin.com/in/fernandoanavia/'
+          target='_blank'
+          rel='noopener noreferrer'
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+         https://www.linkedin.com/in/fernandoanavia/ </a></p>
         <br /><br />
         <h1 className='head-text'> Get in touch </h1>
         <form className='w-full flex flex-col gap-7 mt-14'

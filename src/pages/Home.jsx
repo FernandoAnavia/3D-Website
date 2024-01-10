@@ -6,6 +6,8 @@ import Sky from '../models/Sky'
 import Ajolote from '../models/Ajolote'
 import HomeInfo from '../Components/HomeInfo'
 import sakura from '../assets/sakura.mp3'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { soundoff, soundon } from '../assets/icons'
 
 
@@ -60,6 +62,14 @@ const Home = () => {
 
   return (
     <section className="w-full h-screen relative">
+      <div className="absolute top-3/4 left-2 transform -translate-y-1/2 z-10 flex flex-col items-center">
+        <FontAwesomeIcon icon={faArrowLeft} size="3x" color="#f7ca16" />
+        <span className="text-xs text-black font-bold bg-white">Drag left</span>
+      </div>
+      <div className="absolute top-3/4 right-2 transform -translate-y-1/2 z-10 flex flex-col items-center">
+        <FontAwesomeIcon icon={faArrowRight} size="3x" color="#f7ca16" />
+        <span className="text-xs text-black font-bold bg-white">Drag right</span>
+      </div>
       <div className="absolute top-28 left-28 right-20 z-10 flex justify-left text-white">
         {currentStage && <HomeInfo currentStage = {currentStage}/>}
       </div>
@@ -70,10 +80,10 @@ const Home = () => {
         camera={{ near: 0.1, far: 1000}}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight position={[1,1,1]} intensity={2}/>
+          <directionalLight position={[10,10,10]} intensity={.3}/>
           <ambientLight intensity={0.5}/>
           <pointLight />
-          <spotLight />
+          <spotLight position={[0,2,2]} intensity={15}/>
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1}/>            
             <Sky isRotating={isRotating} />
             <Temple 
@@ -92,14 +102,14 @@ const Home = () => {
             />
         </Suspense>
       </Canvas>
-      <div className='absolute bottom-2 left-2'>
+      {/*<div className='absolute bottom-2 left-2'>
         <img 
           src={!isPlayingMusic ? soundoff : soundon}
           alt='sound'
           className='w-10 h-10 cursor-pointer object-contain'
           onClick={() => setIsPlayingMusic(!isPlayingMusic)}
         />
-      </div>
+      </div> */}
     </section>
   )
 }

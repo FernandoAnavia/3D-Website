@@ -35,10 +35,10 @@ const Projects = () => {
       </h1>
       <div>
         <p className='mt-5 flex flex-col gap-3 text-slate-600'>
-          During my studies, I worked on different projects. Please find below the most relevant ones; It is very likely they can still be improved,
-          so please feel free to contribute if you feel like. <br/><br/>The repositories are available at the bottom of the description of each project and you can see some images by clicking on the camera, then swing left or right.
-          <br /><br />
-          I will continue enhancing the projects and certainly add some more soon.   
+        Throughout my studies, I engaged in various projects. Below, you will find the most relevant ones. 
+        It is highly probable that there is room for improvement, so please feel free to contribute if you have any suggestions. 
+        <br/><br/>
+        I am committed to continuously enhancing these projects and will undoubtedly add more in the near future.
         </p>
       </div>
 
@@ -51,7 +51,7 @@ const Projects = () => {
                 <img 
                   src={project.iconUrl}
                   alt='Project Icon'
-                  className='w-1/2 h-1/2 object-contain'
+                  className='w-3/4 h-3/4 object-contain'
                 />
               </div>
             </div>
@@ -67,16 +67,17 @@ const Projects = () => {
                   to={project.link}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='font-semibold text-blue-600'
+                  className='font-semibold text-blue-600 mr-20'
                 >
-                  Live link
+                  GitHub link
                 </Link>
                 <span
                   role="button"
-                  className="image-trigger"
+                  className="image-trigger ml-20"
                   onClick={() => handleImageClick(index)}
                 >
-                  📷
+                  🖼️📷
+                  <p> Gallery </p>
                 </span>
               </div>
 
