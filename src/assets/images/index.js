@@ -1,6 +1,3 @@
-import hero from './hero.jpg'
-import meta from './meta.png'
-import shopify from './shopify.png'
 import starbucks from './starbucks.png'
 import atento from './atento.png'
 import logo from './logo.svg'
@@ -37,9 +34,6 @@ import web1 from './web1.png'
 import web2 from './web2.png'
 
 export {
-    hero,
-    meta,
-    shopify,
     starbucks,
     atento,
     logo,

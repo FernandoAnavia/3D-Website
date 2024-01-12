@@ -5,28 +5,13 @@ import Temple from '../models/temple'
 import Sky from '../models/Sky'
 import Ajolote from '../models/Ajolote'
 import HomeInfo from '../Components/HomeInfo'
-import sakura from '../assets/sakura.mp3'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { soundoff, soundon } from '../assets/icons'
-
 
 const Home = () => {
-  const audioRef = useRef(new Audio(sakura));
-  audioRef.current.volume = 0.25;
-  audioRef.current.loop = true;
+
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
-  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
-
-  useEffect (() => {
-    if(isPlayingMusic) {
-      audioRef.current.play();
-    }
-    return () => {
-      audioRef.current.pause();
-    }
-  }, [isPlayingMusic])
 
   const adjustTempleForScreenSize = () => {
     let screenScale = null;

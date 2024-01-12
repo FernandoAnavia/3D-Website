@@ -1,9 +1,6 @@
 import { 
-    meta, 
-    shopify, 
     starbucks, 
     atento, 
-    hero,
     blender1,
     blender2,
     game1,
@@ -71,7 +68,7 @@ export const skills = [ //Gold #f7ca16
         type: "Game",
         level: 50,
         background: '#879096',
-        description: 'Blender: Intermediate',
+        description: 'Blender' //: Intermediate',
     },
     {
         imageUrl: express, //express 2
@@ -79,7 +76,7 @@ export const skills = [ //Gold #f7ca16
         type: "Game",
         level: 25,
         background: "#879096",
-        description: 'Unity: Intermediate',
+        description: 'Unity' //: Intermediate',
     },
     {
         imageUrl: git, //git 3
@@ -87,7 +84,7 @@ export const skills = [ //Gold #f7ca16
         type: "Version Control",
         level: 35,
         background: "#879096",
-        description: 'Git: Intermediate',
+        description: 'Git' //: Intermediate',
     },
     {
         imageUrl: github, //github 4
@@ -95,7 +92,7 @@ export const skills = [ //Gold #f7ca16
         type: "Version Control",
         level: 65,
         background: "#879096",
-        description: 'GitHub: Intermediate',
+        description: 'GitHub' //: Intermediate',
     },
     {
         imageUrl: motion, //html 5
@@ -103,7 +100,7 @@ export const skills = [ //Gold #f7ca16
         type: "Coding",
         level: 90,
         background: "#ad8a56",
-        description: 'C++: Basic',
+        description: 'C++' //: Basic',
     },
     {
         imageUrl: redux, //javascript 6
@@ -111,7 +108,7 @@ export const skills = [ //Gold #f7ca16
         type: "Coding",
         level: 40,
         background: "#879096",
-        description: 'MySQL: Intermediate',
+        description: 'MySQL' //: Intermediate',
     },
     {
         imageUrl: mongodb, //mongodb 7
@@ -119,7 +116,7 @@ export const skills = [ //Gold #f7ca16
         type: "Database",
         level: 60,
         background: "#ad8a56",
-        description: 'MongoDB: Basic',
+        description: 'MongoDB' //: Basic',
     },
     {
         imageUrl: typescript, //motion 8
@@ -127,7 +124,7 @@ export const skills = [ //Gold #f7ca16
         type: "Coding",
         level: 40,
         background: "#879096",
-        description: 'Python: Intermediate',
+        description: 'Python' //: Intermediate',
     },
     {
         imageUrl: mui, //mui 9
@@ -135,7 +132,7 @@ export const skills = [ //Gold #f7ca16
         type: "Database",
         level: 85,
         background: "#ad8a56",
-        description: 'R: Basic',
+        description: 'R' //: Basic',
     },
     {
         imageUrl: react, //nextjs 10
@@ -143,7 +140,7 @@ export const skills = [ //Gold #f7ca16
         type: "Web",
         level: 70,
         background: "#ad8a56",
-        description: 'React: Basic',
+        description: 'React' //: Basic',
     },
     {
         imageUrl: nextjs, //nodejs 11
@@ -151,7 +148,7 @@ export const skills = [ //Gold #f7ca16
         type: "Coding",
         level: 65,
         background: "#879096",
-        description: 'Java: Intermediate',
+        description: 'Java' //: Intermediate',
     },
     {
         imageUrl: javascript, //react 12
@@ -159,7 +156,7 @@ export const skills = [ //Gold #f7ca16
         type: "Web",
         level: 80,
         background: "#879096",
-        description: 'JavaScript: Intermediate',
+        description: 'JavaScript' //: Intermediate',
     },
     {
         imageUrl: html, //redux 13
@@ -167,7 +164,7 @@ export const skills = [ //Gold #f7ca16
         type: "Web",
         level: 40,
         background: "#879096",
-        description: 'HTML: Intermediate',
+        description: 'HTML' //: Intermediate',
     },
     {
         imageUrl: css, //sass 14
@@ -175,7 +172,7 @@ export const skills = [ //Gold #f7ca16
         type: "Web",
         level: 60,
         background: "#879096",
-        description: 'CSS: Intermediate',
+        description: 'CSS' //: Intermediate',
     }
 ];
 

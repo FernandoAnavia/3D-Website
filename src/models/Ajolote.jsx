@@ -26,3 +26,4 @@ const Ajolote = ({ isRotating, ...props }) => {
 }
 
 export default Ajolote
+
